@@ -1,0 +1,112 @@
+<section class="py-5">
+    <h1 class="text-center text-light">Our trainers</h1>
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let product of traineer">
+                <div class="card h-100 p-3">
+                    <!-- Product image-->
+                    <h5 class="fw-bolder">{{product.tid}}</h5>
+  
+                    <img height="200px" class="card-img-top" [src]=product.photo [alt]="" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Name:{{product.tname.slice(0,20)}}</h5>
+                            <h5 class="fw-bolder">Contact:{{product.mobile}}</h5>
+                            <h5 class="fw-bolder">{{product.centre.slice(0,25)}}</h5>
+  
+                         <div><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">subscribe (200$)</button></div>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                   
+                </div>
+            </div>
+  
+        </div>
+    </div>
+  </section>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Check out Details</h5>
+          <button type="button" (click)="modalClose()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h6 *ngIf="!paymentBtn" class="text-success">Enter your details</h6>
+            <h6 *ngIf="paymentBtn" class="text-success">Payment Details</h6>
+        <form *ngIf="!paymentBtn" [formGroup]="addressForm" class="border p-2 rounded" (ngSubmit)="submit()">
+         <div class="form-floating mb-3">
+            <label for="floatingInput" >User Name</label>
+                <input name="username" formControlName="username" type="text" class="form-control" id="floatingInput" placeholder="Username" required>
+         </div>
+       
+     <div class="form-floating mb-3">
+        <label for="floatingPassword" >Account Number</label>
+       <input name="addr1" formControlName="addr1" type="text" class="form-control" id="floatingPassword" placeholder="Account Number" required>
+    </div>
+
+<div class="form-floating mb-3">
+    <label for="floatingPassword">Password</label>
+    <input name="addr2" formControlName="addr2" type="password" class="form-control" id="floatingPassword" placeholder="Street Name" required>
+</div>
+     <div class="form-floating mb-3">
+         <label for="floatingPassword" >State</label>
+        <input name="state" formControlName="state" type="text" class="form-control" id="floatingPassword" placeholder="State" required>
+ </div>
+ <!-- submit btn -->
+<div>
+    <input class="btn btn-primary" type="submit" value="Proceed to Payment">
+</div>
+</form>
+<!-- Delivery Address -->
+<div *ngIf="paymentBtn" class="mt-3">
+    <h5>Delivery Address</h5>
+    <h6>{{user.username}}</h6>
+    <p>{{user.addr1}}</p>
+    <p>{{user.addr2}} , {{user.state}}</p>
+</div>
+        <div class="d-flex justify-content-between mt-3">
+            <h6 >Total Amount:<span class="text-danger fw-bolder fs-3">200$</span></h6>
+            <button *ngIf="offerTagStatus" class="btn text-primary" (click)="viewOffers()"><i class="fa-solid fa-tag fa-fade"></i> Offers</button>
+        </div>
+      
+        <!-- offers -->
+        <div *ngIf="offerStatus" class="d-flex justify-content-evenly mt-3">
+            <!-- offer10% -->
+            <img *ngIf="cartTotalPrice<500" (click)="discount10()" width="100px" height="100px" src="https://static.vecteezy.com/system/resources/previews/001/994/730/original/big-discount-10-off-3d-design-free-vector.jpg" alt="discount coupon">
+            <!-- offer50% -->
+             <img *ngIf="cartTotalPrice>=500" (click)="discount50()" width="100px" height="100px" src="https://cdn.pixabay.com/photo/2015/10/31/12/22/discount-1015447__340.jpg" alt="discount coupon">
+
+        </div>
+        </div>
+        <hr>
+         <!-- success msg -->
+         <div *ngIf="showSuccess" class="text-center text-success fs-3">
+            Payment Successfully completed...Your order is confirmed!!!
+        </div>
+          <!-- showCancel -->
+          <div *ngIf="showCancel" class="text-center text-danger fs-3">
+          Your transaction has been cancelled!!!
+        </div>
+        <!-- showError -->
+        <div *ngIf="showError" class="text-center text-yellow fs-3">
+            Transaction failed!!!
+        </div>
+        <div *ngIf="makepaymentStatus" class="modal-footer">
+       
+        <!-- paypal btn-->
+    <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+        </div>
+
+        <!-- payment btn -->
+
+        <div *ngIf="paymentBtn" class="modal-footer">
+          <button *ngIf="!makepaymentStatus" (click)="makepayment()" type="button" class="btn btn-primary">Make Payment</button>
+       
+        </div>
+      </div>
+    </div>
+  </div>

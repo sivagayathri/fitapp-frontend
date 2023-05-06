@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" href="#!">Fitness App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      </div>
+    </div>
+  </nav>
+<div id="image"><div *ngIf="registerStatus" class="container mt-5 text-center text-light">
+    <h3>your data are getting registered......<br>please wait.....</h3>
+</div>
+<div *ngIf="!registerStatus" class="container-fluid mt-2">
+<div>
+    <h2>CREATE ACCOUNT</h2>
+    
+    <div class="row text-center"><form class="p-5 me-5 rounded">
+        <div><input type="text" name="name" [(ngModel)]="name" id="" placeholder="username"></div>
+        <div><input type="text" name="userid" [(ngModel)]="userid" id="" placeholder="user id"></div>
+        <div><input type="password" name="password"  [(ngModel)]="password" id="" placeholder="password"></div>
+        <div><input type="text" name="weight" [(ngModel)]="weight" id="" placeholder="enter your weight"></div>
+        <div><input type="text" name="height" [(ngModel)]="height" id="" placeholder="enter your height"></div>
+        <div><input type="text" name="bmi" [(ngModel)]="bmi" id="" placeholder="enter your bmi"></div>
+
+       <div class="row"> <div class="col-6"><button (click)="calculatebmi()" class="btn btn-primary">BMI</button></div>
+        <div class="col-6"><button (click)="register()" class="btn btn-success">register</button></div></div>
+        <div *ngIf="bmiis" id="bmi">Hi user! your current BMI is:{{bmiValue}}</div>
+        
+    </form></div>
+</div></div>

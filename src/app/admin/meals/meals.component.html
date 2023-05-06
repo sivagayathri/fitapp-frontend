@@ -1,0 +1,14 @@
+           <h3>Add a new meal plan</h3>
+<br>
+<br>
+<br>
+           <div class="row">
+            <div id="image" class="col-6"></div>
+            <div class="col-6"><form>
+                <input name="mealid" [(ngModel)]="mealid" type="text" id="" placeholder="id">
+                <input name="title" [(ngModel)]="title" type="text" placeholder="title">
+                <br>
+                <br>
+            <textarea name="content" [(ngModel)]="content" id="" cols="30" rows="10" placeholder="content"></textarea></form></div>
+            <button (click)="meal()">submit</button>
+           </div>

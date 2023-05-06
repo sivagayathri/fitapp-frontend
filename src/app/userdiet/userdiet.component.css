@@ -1,0 +1,79 @@
+
+span{
+    font-size: 64px;
+    color: rgb(246, 239, 247);
+}
+#heading{
+    margin-top: 10px;
+    font-size: 400px;
+    color: antiquewhite;
+  
+    
+}
+#headingg{
+    color: antiquewhite;
+    text-align: center;
+    font-size: 30px;
+}
+#span{
+    font-size: 10px;
+}
+#card4{
+    margin-top: -10px;
+    width: 600rem;
+   
+    justify-content: center;
+}
+#shiva{
+   width: 100rem;
+   height: 600px;
+   margin-left: 30px;
+  
+   box-shadow: rgb(231, 196, 196),rgb(195, 233, 229);
+}
+#shiva:hover{
+     background-color:transparent;
+     
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#design{
+    margin-top: 30px;
+  
+}
+#spinn{
+    color: aliceblue;
+    
+}
+#cards{
+   
+    margin-top: 50px;
+    margin-left: 270px;
+    background-color: rgb(159, 193, 194);
+  
+}
+#navbarSupportedContent{
+    margin-left: 700px;
+}
+#button{
+    color: rgb(39, 39, 49);
+    background-color:rgb(129, 187, 235);
+}
+.base {
+    
+    height: 100%;
+    background-size: cover;
+  /* background-image: url(https://images.pexels.com/photos/531767/pexels-photo-531767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+  }
+  li{
+    font-size: 20px;
+    color: rgb(40, 40, 53);
+  }
+  h5{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }

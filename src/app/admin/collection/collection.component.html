@@ -1,0 +1,32 @@
+<div>
+    <h2 class="text-center text-primary">Registered Members</h2>
+    <div class="row text-center container mt-3 mx-auto ">
+        <div class="col-lg-5"></div>
+        
+    </div>
+
+    <table class="table table-success">
+        <thead>
+            <tr>
+                <th scope="col">Name:</th>
+                <th scope="col">Userid:</th>
+                <th scope="col">weight:</th>
+                <th scope="col">height:</th>
+                <th scope="col">bmi:</th>
+                <th scope="col">password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let b of resultss">
+                <td>{{b.name}}</td>
+                <td>{{b.userid}}</td>
+                <td>{{b.weight}}</td>
+                <td>{{b.height}}</td>
+                <td>{{b.bmi}}</td>
+                <td>{{b.password}}</td>
+               
+
+            </tr>
+        </tbody>
+    </table>
+</div>

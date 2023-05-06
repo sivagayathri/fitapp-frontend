@@ -1,0 +1,157 @@
+img{
+    width: 50%;
+    height: 600px;
+}
+
+h2{
+    font-family: 'Alkatra', cursive;
+    font-size: 70px;
+    color: white;
+    font-family: 'Lilita One', cursive;
+}
+#shiva{
+
+    margin-left: 450px;
+}
+.card{
+    width:850px ;
+    height: 300px;
+    margin-left: 80px;
+    font-family: 'Chivo Mono', monospace;
+    text-shadow: -1px 0 rgb(36, 34, 34), 0 1px rgb(233, 224, 224), 1px 0 rgb(235, 225, 225), 0 -1px rgb(247, 239, 239);
+}
+.card-header{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: -1px 0 rgb(233, 224, 224), 0 1px rgb(233, 224, 224), 1px 0 rgb(235, 225, 225), 0 -1px rgb(247, 239, 239);
+
+}
+#item4{
+    margin-left: 30px;
+    font-size: 20px;
+    color: brown;
+}
+#fitnessnav{
+    font-size: 30px;
+}
+#item3{
+    margin-left: 10px;
+    font-size: 20px;
+    
+}
+#itemm{
+    margin-left: -300px;
+    font-size: 20px;
+}
+#item5{
+  margin-left: 30px;
+  font-size: 20px;
+}
+#item2{
+    margin-left: 40px;
+    font-size: 20px;
+}
+#item3{
+  margin-left:30px ;
+  font-size: 20px;
+}
+#about{
+    padding: 70px;
+}
+.nav-item{
+    align-items: flex-end;
+}
+#item{
+    margin-left: 900px;
+}
+.navbar{
+    color: rgb(63, 126, 182);
+    
+}
+#nav{
+    margin-left: -80px;
+}
+span{
+    color: rgb(240, 248, 255);
+}
+p:hover{
+    background-color: rgb(68, 66, 64);
+    cursor: pointer;
+    text-shadow: -1px 0 rgb(233, 224, 224), 0 1px rgb(233, 224, 224), 1px 0 rgb(235, 225, 225), 0 -1px rgb(247, 239, 239);
+
+
+}
+.card-header:hover{
+    background-color: rgb(133, 129, 126);
+}
+.footer {
+    padding: 0 20px;
+    z-index: 10;
+    background-color: #000;
+    min-height: 298px;
+    width: 100%;
+    color: #fff;
+    overflow: scroll;
+  }
+  .footer-content {
+    width: 100%;
+    display: flex;
+    background-color: #000000;
+    justify-content: space-around;
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    padding: 76px 0;
+    height: 100%;
+  }
+  
+  .points {
+    color: #808080;
+    font-size: 15px;
+    font-weight: 600;
+    /*    border: 1px solid white;*/
+    width: 300px;
+    margin: 26px 0px 10px 15px;
+    /*    padding: 15px 0px 0px 0px;*/
+  }
+  
+  .footer-li {
+    padding: 20px 10px 2px 0px;
+  }
+  
+  .footer-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-li a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  
+  .footer-li a:hover {
+    font-weight: 600;
+  }
+  .points img {
+    border: 2px solid #808080;
+    padding: 10px;
+    margin: 30px 0px 10px 57px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+  }
+  
+  .points img:hover {
+    transform: scale(1.06);
+    cursor: pointer;
+  }
+  .head viji{
+    position: sticky;
+    top: -276px;
+  }
+ header div h4{
+    position: sticky;
+    top: 0px;
+  }

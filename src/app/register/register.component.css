@@ -1,0 +1,28 @@
+input{
+    width: 400px;
+    height: 50px;
+    margin: 10px;
+}
+button{
+    height: 40px;
+    width: 100px;
+    padding: 5px;
+    margin: 10px;
+}
+#bmi{
+    color: rgb(24, 23, 23);
+    font-size: 25px;
+}
+#image{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/007/188/453/original/abstract-blur-background-with-pastel-color-free-vector.jpg');
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-size: cover;
+}
+p{
+    color: rgb(29, 27, 27);
+    font-size: 20px;
+}
+h3{
+    color: black;
+}

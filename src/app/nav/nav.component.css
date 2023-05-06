@@ -1,0 +1,16 @@
+mat-toolbar{
+    background-color: rgb(71, 92, 92);
+}
+span{
+    margin-left: 560px;
+    font-size: 40px;
+
+}
+#button{
+    color: rgb(245, 240, 240);
+    background-color: rgb(236, 70, 70);
+    margin-left: 950px;
+}
+#nav{
+    margin-left: -80px;
+}

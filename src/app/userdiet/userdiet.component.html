@@ -1,0 +1,80 @@
+<nav *ngIf="!logoutstatus" class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container px-4 px-lg-5">
+    <a class="navbar-brand" href="#!">Fitness App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+        class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <a class="btn btn-success text-light" routerLink="/trainer">premium</a>&nbsp;&nbsp;
+  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <a (click)="logout()" class="btn btn-success">Log out</a>
+     
+    </div>
+  </div>
+</nav>
+
+<div *ngIf="logoutstatus" style="margin-top:400px;" class="container mt-5 text-center">
+  <h2 id="spinn"><img width="50px" src="https://shortpixel.com/img/spinner2.gif" alt="">Thankyou {{currentUsername}},You have successfully been logged out</h2>
+</div>
+
+
+
+
+    <div *ngIf="!logoutstatus" id="heading" class="text-center">
+      <h1 class="text-center"><span> Welcome {{currentUsername}}</span></h1>
+      <h2 class="text-center">Your current BMI:{{bmi}}</h2>
+      
+    </div>
+    <div *ngIf="!logoutstatus" class="col-6">
+      <div id="cards" class="card" style="width: 50rem;">
+
+        <div class="row card-body">
+
+        <div class="col-5">          <h2>Along with eating right and being active, real health includes getting enough sleep, practicing
+        mindfulness, managing stress, keeping mind and body fit, connecting socially, and more.</h2></div>
+        <div class="col-7"> <ul class="list-group list-group-flush">
+            
+        <button id="button" (click)="work()" class="btn btn-success">Tap here to see your workout suggestion<li name="workout" [(ngModel)]="workout" class="list-group-item">{{workout}}</li></button>
+        <a routerLink="/workout" id="boot" class="text-center btn btn-success">go to workout</a><br>
+        <button  id="button" (click)="diett()" class="btn btn-success">Tap here to see your diet suggestion<li name="diet" [(ngModel)]="diet" class="list-group-item">{{diet}}</li></button>
+
+
+       </ul></div>
+
+         
+        </div>
+      </div>
+    </div>
+  <br>
+  <br>
+  <div *ngIf="view"><h2 id="headingg"> Check out the diet plan</h2>
+    
+   <section class="py-1">
+      <div id="card4" class="container px-lg-5 mt-5">
+          <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+              <div class="col mb-5" *ngFor="let p of mealid">
+                  <div class="card h-100 p-3">
+                      <!-- Product image-->
+                      <h5 class="fw-bolder">{{p.mealid}}</h5>
+                      <img height="100px" width="130px" class="card-img-top" [src]=p.image [alt]="" />
+                      <!-- Product details-->
+                      <div class="card-body p-4">
+                          <div class="text-center">
+                              <!-- Product name-->
+                              <h5 class="fw-bolder">Name:{{p.title}}</h5>
+                        
+                             <p class="collapse" id="collapseExample">{{p.content}}</p>
+                             <button (click)="collapse()" class="btn btn-primary mt-2" data-bs-toggle="collapse"   data-bs-target="#collapseExample">
+                              read<span id="span" *ngIf="isCollapse">More</span>
+                              <span id="span" *ngIf="!isCollapse">Less</span></button>
+    
+                           
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div>
+    
+          </div>
+      </div>
+    </section>
+  </div>
